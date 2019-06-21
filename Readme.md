@@ -10,6 +10,9 @@
 * [TypedListDataBindingPartial.cshtml](./CS/CS/Views/Home/TypedListDataBindingPartial.cshtml)
 <!-- default file list end -->
 # How to bind GridView with standard in-memory data sources (DataTable, List<T>)
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e3530)**
+<!-- run online end -->
 
 
 <p>This example illustrate how to bind the MVC GridView Extension with the standard in-memory data sources:</p><p>- The ADO.NET DataTable - DataTableDataBinding View / DataTableDataBindingPartial Partial View;</p><p>- The Typed List (List<T>) - TypedListDataBinding View / TypedListDataBindingPartial Partial View.</p><br />
