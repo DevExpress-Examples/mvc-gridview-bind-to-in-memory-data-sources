@@ -11,7 +11,7 @@
 <!-- default file list end -->
 # How to bind GridView with standard in-memory data sources (DataTable, List<T>)
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e3530)**
+**[[Run Online]](https://codecentral.devexpress.com/e3530/)**
 <!-- run online end -->
 
 
