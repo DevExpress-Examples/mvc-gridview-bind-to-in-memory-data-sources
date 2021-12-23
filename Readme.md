@@ -3,8 +3,49 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E3530)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# Grid View for MVC - How to Bind a Grid to Standard In-Memory Data Sources (DataTable, List<T>)
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e3530/)**
+<!-- run online end -->
+
+This example illustrate how to bind the [MVC GridView Extension](https://docs.devexpress.com/AspNetMvc/8966/components/grid-view)'s columns to data sources fields:
+
+* The [ADO.NET DataTable](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/dataset-datatable-dataview/datatables) - DataTableDataBinding View / DataTableDataBindingPartial Partial View
+* The Typed List ([List&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0)) - TypedListDataBinding View / TypedListDataBindingPartial Partial View
+
+The following image shows a grid bound to a DataTable object:
+
+![A grid displays data from a DataTable](images/resulting-grid.png)
+
+Use the [Columns](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.Columns?p=netframework) property to access the collection of grid columns.
+
+Then add four [columns](https://docs.devexpress.com/AspNetMvc/16149/components/grid-view/concepts/data-representation-basics/columns) and bind them to the "ID", "Text", "Quantity", "Price" data source fields:
+
+```cshtml
+settings.Columns.Add("ID");
+settings.Columns.Add("Text");
+settings.Columns.Add("Quantity");
+settings.Columns.Add("Price");
+```
+
+You can also add an [unbound column](https://docs.devexpress.com/AspNetMvc/16859/components/grid-view/concepts/data-representation-basics/columns/unbound-columns) whose values are calculated based on the values of bound columns:
+
+```cshtml
+settings.Columns.Add(unboundColumn => {
+    unboundColumn.FieldName = "UniqueFieldName";
+    unboundColumn.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
+});
+settings.CustomUnboundColumnData = (sender, e) => {
+    if (e.Column.FieldName == "UniqueFieldName") {
+        int quantity = Convert.ToInt32(e.GetListSourceFieldValue("Quantity"));
+        decimal price = (decimal)e.GetListSourceFieldValue("Price");
+        e.Value = quantity * price;
+    }
+};
+```
+
+## Files to Look At
 
 * [HomeController.cs](./CS/CS/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/VB/Controllers/HomeController.vb))
 * [Model.cs](./CS/CS/Models/Model.cs) (VB: [Model.vb](./VB/VB/Models/Model.vb))
@@ -13,19 +54,14 @@
 * [Index.cshtml](./CS/CS/Views/Home/Index.cshtml)
 * [TypedListDataBinding.cshtml](./CS/CS/Views/Home/TypedListDataBinding.cshtml)
 * [TypedListDataBindingPartial.cshtml](./CS/CS/Views/Home/TypedListDataBindingPartial.cshtml)
-<!-- default file list end -->
-# How to bind GridView with standard in-memory data sources (DataTable, List<T>)
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e3530/)**
-<!-- run online end -->
 
+## Documentation
 
-<p>This example illustrate how to bind the MVC GridView Extension with the standard in-memory data sources:</p><p>- The ADO.NET DataTable - DataTableDataBinding View / DataTableDataBindingPartial Partial View;</p><p>- The Typed List (List<T>) - TypedListDataBinding View / TypedListDataBindingPartial Partial View.</p><br />
-<p>The GridView's definition contains:</p><p>- Set of Data Columns whose values are retrieved from the underlying datasource (the /*Data-Bound Columns*/ section);</p><p>- A single Unbound Column (the /*Unbound Columns*/ section) whose values are computed based on the bound columns' values (the /*Unbound Column Calculating*/ section).</p><br />
-<p>Both data sources (Models) have the same set of fields. These Models are defined within the /Models/Model code file.</p><p><strong>See Also:</strong><br />
-<a href="https://www.devexpress.com/Support/Center/p/E3983">E3983: GridView - How to edit in memory data source</a><br />
-<a href="https://www.devexpress.com/Support/Center/p/E3998">E3998: GridView - How to specify a custom EditForm Template</a></p>
+* [MVC GridView Extension](https://docs.devexpress.com/AspNetMvc/8966/components/grid-view)
+* [Grid View - Columns](https://docs.devexpress.com/AspNetMvc/16149/components/grid-view/concepts/data-representation-basics/columns)
+* [Grid View - Binding to Data](https://docs.devexpress.com/AspNetMvc/14722/components/grid-view/concepts/binding-to-data)
 
-<br/>
+## More Examples
 
-
+* [GridView - How to Edit in Memory Data Source](https://github.com/DevExpress-Examples/gridview-how-to-edit-in-memory-data-source-e3983)
+* [GridView - How to Specify a Custom EditForm Template](https://github.com/DevExpress-Examples/gridview-how-to-specify-a-custom-editform-template-e3998)
