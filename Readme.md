@@ -9,18 +9,18 @@
 **[[Run Online]](https://codecentral.devexpress.com/e3530/)**
 <!-- run online end -->
 
-This example illustrate how to bind the [MVC GridView Extension](https://docs.devexpress.com/AspNetMvc/8966/components/grid-view)'s columns to data sources fields:
+This example shows how to bind the [MVC GridView Extension](https://docs.devexpress.com/AspNetMvc/8966/components/grid-view)'s [columns](https://docs.devexpress.com/AspNetMvc/16149/components/grid-view/concepts/data-representation-basics/columns) to data sources fields:
 
 * The [ADO.NET DataTable](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/dataset-datatable-dataview/datatables) - DataTableDataBinding View / DataTableDataBindingPartial Partial View
 * The Typed List ([List&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0)) - TypedListDataBinding View / TypedListDataBindingPartial Partial View
 
-The following image shows a grid bound to a DataTable object:
+Also, this example demonstrates how to create an [unbound column](https://docs.devexpress.com/AspNetMvc/16859/components/grid-view/concepts/data-representation-basics/columns/unbound-columns) and populate it with data.
 
 ![A grid displays data from a DataTable](images/resulting-grid.png)
 
-Use the [Columns](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.Columns?p=netframework) property to access the collection of grid columns.
+Use the [GridViewSettings.Columns](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.Columns?p=netframework) property to access the collection of grid columns.
 
-Then add four [columns](https://docs.devexpress.com/AspNetMvc/16149/components/grid-view/concepts/data-representation-basics/columns) and bind them to the "ID", "Text", "Quantity", "Price" data source fields:
+Add four columns and bind them to the "ID", "Text", "Quantity", "Price" data source fields:
 
 ```cshtml
 settings.Columns.Add("ID");
@@ -29,7 +29,7 @@ settings.Columns.Add("Quantity");
 settings.Columns.Add("Price");
 ```
 
-You can also add an [unbound column](https://docs.devexpress.com/AspNetMvc/16859/components/grid-view/concepts/data-representation-basics/columns/unbound-columns) whose values are calculated based on the values of bound columns:
+Then, add an unbound column whose values are calculated based on the values of bound columns. Use the unbound column's [FieldName](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.FieldName) and [UnboundType](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.UnboundType) properties to specify the column name and value type. Calculate column values in the [CustomUnboundColumnData](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.CustomUnboundColumnData?p=netframework) event handler:
 
 ```cshtml
 settings.Columns.Add(unboundColumn => {
@@ -47,11 +47,9 @@ settings.CustomUnboundColumnData = (sender, e) => {
 
 ## Files to Look At
 
-* [HomeController.cs](./CS/CS/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/VB/Controllers/HomeController.vb))
 * [Model.cs](./CS/CS/Models/Model.cs) (VB: [Model.vb](./VB/VB/Models/Model.vb))
 * [DataTableDataBinding.cshtml](./CS/CS/Views/Home/DataTableDataBinding.cshtml)
 * [DataTableDataBindingPartial.cshtml](./CS/CS/Views/Home/DataTableDataBindingPartial.cshtml)
-* [Index.cshtml](./CS/CS/Views/Home/Index.cshtml)
 * [TypedListDataBinding.cshtml](./CS/CS/Views/Home/TypedListDataBinding.cshtml)
 * [TypedListDataBindingPartial.cshtml](./CS/CS/Views/Home/TypedListDataBindingPartial.cshtml)
 
