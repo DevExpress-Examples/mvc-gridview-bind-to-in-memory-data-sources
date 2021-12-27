@@ -9,7 +9,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/e3530/)**
 <!-- run online end -->
 
-This example shows how to bind the [MVC GridView Extension](https://docs.devexpress.com/AspNetMvc/8966/components/grid-view)'s [columns](https://docs.devexpress.com/AspNetMvc/16149/components/grid-view/concepts/data-representation-basics/columns) to the following data sources:
+This example shows how to bind [MVC GridView Extension](https://docs.devexpress.com/AspNetMvc/8966/components/grid-view) [columns](https://docs.devexpress.com/AspNetMvc/16149/components/grid-view/concepts/data-representation-basics/columns) to the following data sources:
 
 * The [ADO.NET DataTable](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/dataset-datatable-dataview/datatables) - [DataTableDataBinding](./CS/CS/Views/Home/DataTableDataBinding.cshtml) View / [DataTableDataBindingPartial](./CS/CS/Views/Home/DataTableDataBindingPartial.cshtml) Partial View
 * The Typed List ([List&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0)) - [TypedListDataBinding](./CS/CS/Views/Home/TypedListDataBinding.cshtml) View / [TypedListDataBindingPartial](./CS/CS/Views/Home/TypedListDataBindingPartial.cshtml) Partial View
