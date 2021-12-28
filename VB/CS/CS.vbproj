@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion></ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0F4B25D3-378A-42AE-955F-AA64C28BC787}</ProjectGuid>
+    <ProjectGuid>{52227174-CB20-48A9-817E-82B8A4F98A31}</ProjectGuid>
     <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>VB</RootNamespace>
-    <AssemblyName>VB</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>CS</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <OptionExplicit>On</OptionExplicit>
-    <OptionCompare>Binary</OptionCompare>
-    <OptionStrict>Off</OptionStrict>
-    <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <DefineDebug>true</DefineDebug>
-    <DefineTrace>true</DefineTrace>
+    <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>VB.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DefineConstants>DEBUG,TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <DefineDebug>false</DefineDebug>
-    <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>VB.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -45,10 +45,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Extensions.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -139,99 +138,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Import Include="DevExpress.Utils" />
-    <Import Include="DevExpress.Web.ASPxClasses" />
-    <Import Include="DevExpress.Web.ASPxGridView" />
-    <Import Include="DevExpress.Web.ASPxGridView.Export" />
-    <Import Include="DevExpress.Web.ASPxEditors" />
-    <Import Include="DevExpress.Web.ASPxCallbackPanel" />
-    <Import Include="DevExpress.Web.ASPxMenu" />
-    <Import Include="DevExpress.Web.ASPxNavBar" />
-    <Import Include="DevExpress.Web.ASPxPopupControl" />
-    <Import Include="DevExpress.Web.ASPxRoundPanel" />
-    <Import Include="DevExpress.Web.ASPxSplitter" />
-    <Import Include="DevExpress.Web.ASPxTabControl" />
-    <Import Include="DevExpress.Web.ASPxTreeView" />
-    <Import Include="DevExpress.Web.ASPxUploadControl" />
-    <Import Include="DevExpress.Web.ASPxHtmlEditor" />
-    <Import Include="DevExpress.Web.ASPxSpellChecker" />
-    <Import Include="DevExpress.XtraCharts" />
-    <Import Include="DevExpress.XtraCharts.Web" />
-    <Import Include="DevExpress.XtraReports" />
-    <Import Include="DevExpress.XtraReports.UI" />
-    <Import Include="DevExpress.XtraReports.Web" />
-    <Import Include="DevExpress.Web.Mvc" />
-    <Import Include="DevExpress.Web.Mvc.UI" />
-    <Import Include="Microsoft.VisualBasic" />
-    <Import Include="System" />
-    <Import Include="System.Collections" />
-    <Import Include="System.Collections.Generic" />
-    <Import Include="System.Data" />
-    <Import Include="System.Linq" />
-    <Import Include="System.Xml.Linq" />
-    <Import Include="System.Diagnostics" />
-    <Import Include="System.Collections.Specialized" />
-    <Import Include="System.Configuration" />
-    <Import Include="System.Text" />
-    <Import Include="System.Text.RegularExpressions" />
-    <Import Include="System.Web" />
-    <Import Include="System.Web.Caching" />
-    <Import Include="System.Web.Mvc" />
-    <Import Include="System.Web.Mvc.Ajax" />
-    <Import Include="System.Web.Mvc.Html" />
-    <Import Include="System.Web.Routing" />
-    <Import Include="System.Web.SessionState" />
-    <Import Include="System.Web.Security" />
-    <Import Include="System.Web.Profile" />
-    <Import Include="System.Web.UI" />
-    <Import Include="System.Web.UI.WebControls" />
-    <Import Include="System.Web.UI.WebControls.WebParts" />
-    <Import Include="System.Web.UI.HtmlControls" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Model.vb" />
-    <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="My Project\Application.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Settings.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Controllers\HomeController.vb" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-      <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="My Project\Application.myapp">
-      <Generator>MyApplicationCodeGenerator</Generator>
-      <LastGenOutput>Application.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="My Project\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <CustomToolNamespace>My</CustomToolNamespace>
-      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
-    </None>
-    <Content Include="Views\Home\TypedListDataBinding.vbhtml" />
-    <Content Include="Views\Home\TypedListDataBindingPartial.vbhtml" />
-    <Content Include="Views\Home\DataTableDataBinding.vbhtml" />
-    <Content Include="Views\Home\DataTableDataBindingPartial.vbhtml" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -249,13 +161,25 @@
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
-    <Content Include="Views\_ViewStart.vbhtml" />
-    <Content Include="Views\Home\Index.vbhtml" />
-    <Content Include="Views\Shared\_Layout.vbhtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\DataTableDataBinding.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\DataTableDataBindingPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\TypedListDataBinding.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\TypedListDataBindingPartial.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -274,12 +198,14 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>55589</DevelopmentServerPort>
+          <DevelopmentServerPort>54946</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl></IISUrl>
+          <IISUrl>
+          </IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl></CustomServerUrl>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
