@@ -161,25 +161,25 @@
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Home\Index.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\DataTableDataBinding.cshtml" />
+    <Content Include="Views\Home\DataTableDataBinding.vbhtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\DataTableDataBindingPartial.cshtml" />
+    <Content Include="Views\Home\DataTableDataBindingPartial.vbhtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\TypedListDataBinding.cshtml" />
+    <Content Include="Views\Home\TypedListDataBinding.vbhtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\TypedListDataBindingPartial.cshtml" />
+    <Content Include="Views\Home\TypedListDataBindingPartial.vbhtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
