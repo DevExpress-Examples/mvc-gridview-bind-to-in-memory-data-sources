@@ -1,4 +1,4 @@
-@model System.Collections.IEnumerable
+@ModelType System.Collections.IEnumerable
 <b>TypedList DataBinding</b>
 <br /><br />
 @Html.Partial("TypedListDataBindingPartial", Model)
