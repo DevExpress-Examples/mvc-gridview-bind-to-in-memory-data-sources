@@ -47,7 +47,7 @@ settings.CustomUnboundColumnData = (sender, e) => {
 
 ## Files to Look At
 
-* [Model.cs](./CS/CS/Models/Model.cs) (VB: [Model.vb](./VB/VB/Models/Model.vb))
+* [Model.cs](./CS/CS/Models/Model.cs) (VB: [Model.vb](./VB/CS/Models/Model.vb))
 * [DataTableDataBinding.cshtml](./CS/CS/Views/Home/DataTableDataBinding.cshtml)
 * [DataTableDataBindingPartial.cshtml](./CS/CS/Views/Home/DataTableDataBindingPartial.cshtml)
 * [TypedListDataBinding.cshtml](./CS/CS/Views/Home/TypedListDataBinding.cshtml)
