@@ -1,4 +1,4 @@
-@Html.DevExpress().GridView(Sub()
+@Html.DevExpress().GridView(Sub(settings)
                                      settings.Name = "gvDataTableDataBinding"
                                      settings.CallbackRouteValues = New With {.Controller = "Home", .Action = "DataTableDataBindingPartial"}
 
