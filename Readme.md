@@ -62,7 +62,7 @@ settings.CustomUnboundColumnData = (sender, e) => {
 * [GridView - How to Edit in Memory Data Source](https://github.com/DevExpress-Examples/gridview-how-to-edit-in-memory-data-source-e3983)
 * [GridView - How to Specify a Custom EditForm Template](https://github.com/DevExpress-Examples/gridview-how-to-specify-a-custom-editform-template-e3998)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=mvc-gridview-bind-to-in-memory-data-sources&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=mvc-gridview-bind-to-in-memory-data-sources&~~~was_helpful=no)
 
